@@ -1,16 +1,20 @@
 name: Dispatch Build
 version: 1.0.0
-inherits: wercker/ubuntu12.04-ruby2.0.0@1.0.0
+inherits: wercker/ubuntu12.04-ruby2.0.0
 type: main
 platform: ubuntu@12.04
 description: Box for Wercker to build and deploy Dispatch front-end components using multistage capistrano.
 packages:
-  - nodejs@0.10.26
-  - compass@0.12.2
+  - nodejs
+  - compass
+  - grunt
+  - bower
 keywords:
   - nodejs
   - ruby
   - compass
+  - grunt
+  - bower
 script: |
   sudo apt-get update -y
 
@@ -31,5 +35,5 @@ script: |
   rm -fr nodeinstall
   node -v
 
-  # ruby dependecies
-  sudo gem install compass
+  # dependencies
+  sudo npm install -g compass grunt-cli bower
