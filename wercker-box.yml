@@ -1,6 +1,6 @@
 name: Dispatch-Build
-version: 1.0.0
-inherits: wercker/ubuntu12.04-ruby2.0.0@1.0.0
+version: 1.0.1
+inherits: wercker/rvm
 type: main
 platform: ubuntu@12.04
 description: Box for Wercker to build and deploy Dispatch front-end components using multistage capistrano.
